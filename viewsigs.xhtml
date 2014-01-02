@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:tal="http://purl.org/petal/1.0/" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <title>View Petition Signatures</title>
+    <script type="text/javascript" src="sortable/common.js" />
+    <script type="text/javascript" src="sortable/css.js" />
+    <script type="text/javascript" src="sortable/standardista-table-sorting.js" />
+    <link rel="stylesheet" type="text/css" href="viewsigs.css" />
+  </head>
+  <body>
+    <table class="sortable">
+      <thead>
+	<tr>
+	  <th>#</th>
+	  <th>Name</th>
+	  <th>Email</th>
+	  <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Country</th>
+	  <th>Comments</th>
+	</tr>
+      </thead>
+      <tbody>
+	<tr tal:repeat="sig sigs">
+	  <td>$sig/id</td>
+	  <td>$sig/first_name $sig/last_name</td>
+	  <td>$sig/email</td>
+	  <td>$sig/address</td>
+	  <td>$sig/city</td>
+	  <td>$sig/state</td>
+	  <td>$sig/country</td>
+	  <td>$sig/comments</td>
+	</tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" type="text/css" href="petition.css">
+<script language="JavaScript" src="gen_validatorv2.js" type="text/javascript"></script>
+</head>
+<body>
+<h1></h1>
+<div class="formrow">
+  <span class='required'>*</span> Required Field
+</div>
+<form method="post" name="petition" id="petition" action="sign.pl">
+<input type="hidden" name="redirect" value="http://jesse-crockers-computer.local/~jesse/petition/mailtofriend.html">
+<div class="formrow">
+  <label for="first_name" accesskey="F"><em>F</em>irst Name<span class='required'>*</span></label>
+  <input type="text" id="first_name" name="first_name" value="" size=25>
+</div>
+<div class="formrow">
+  <label for="last_name" accesskey="L"><em>L</em>ast Name<span class='required'>*</span></label>
+  <input type="text" id="last_name" name="last_name" value="" size=30>
+</div>
+<div class="formrow">
+  <label for="email" accesskey="E"><em>E</em>mail<span class='required'>*</span></label>
+  <input type="text" id="email" name="email" value="" size=100>
+</div>
+<div class="formrow">
+  <input type="checkbox" id="list" name="list" value="1" checked=1>
+  <label for="list"><span class="bold">YES!</span> I want to stay informed.  Please send me BFC's email Updates from the Field.</label>
+</div>
+<div class="formrow">
+  <label for="address" accesskey="A"><em>A</em>ddress<span class='required'>*</span></label>
+  <input type="text" id="address" name="address" value="" size=100>
+</div>
+<div class="formrow">    
+  <label for="city" accesskey="C"><em>C</em>ity<span class='required'>*</span></label>
+  <input type="text" id="city" name="city" value="" size=50>
+</div>
+<div class="formrow">
+  <label for="state" accesskey="S"><em>S</em>tate<span class='required'>*</span></label>
+  <select id="state" name="state">
+  <option value="">Select a state</option>
+  <option value="AL" >Alabama</option>
+  <option value="AK" >Alaska</option>
+  <option value="AS" >American Samoa</option>
+  <option value="AZ" >Arizona</option>
+  <option value="AR" >Arkansas</option>
+  <option value="CA" >California</option>
+  <option value="CO" >Colorado</option>
+  <option value="CT" >Connecticut</option>
+  <option value="DE" >Delaware</option>
+  <option value="DC" >D.C.</option>
+  <option value="FL" >Florida</option>
+  <option value="GA" >Georgia</option>
+  <option value="GU" >Guam</option>
+  <option value="HI" >Hawaii</option>
+  <option value="ID" >Idaho</option>
+  <option value="IL" >Illinois</option>
+  <option value="IN" >Indiana</option>
+  <option value="IA" >Iowa</option>
+  <option value="KS" >Kansas</option>
+  <option value="KY" >Kentucky</option>
+  <option value="LA" >Louisiana</option>
+  <option value="ME" >Maine</option>
+  <option value="MD" >Maryland</option>
+  <option value="MA" >Massachusetts</option>
+  <option value="MI" >Michigan</option>
+  <option value="MN" >Minnesota</option>
+  <option value="MS" >Mississippi</option>
+  <option value="MO" >Missouri</option>
+  <option value="MT" >Montana</option>
+  <option value="NE" >Nebraska</option>
+  <option value="NV" >Nevada</option>
+  <option value="NH" >New Hampshire</option>
+  <option value="NJ" >New Jersey</option>
+  <option value="NM" >New Mexico</option>
+  <option value="NY" >New York</option>
+  <option value="NC" >North Carolina</option>
+  <option value="ND" >North Dakota</option>
+  <option value="OH" >Ohio</option>
+  <option value="OK" >Oklahoma</option>
+  <option value="OR" >Oregon</option>
+  <option value="PA" >Pennsylvania</option>
+  <option value="PR" >Puerto Rico</option>
+  <option value="RI" >Rhode Island</option>
+  <option value="SC" >South Carolina</option>
+  <option value="SD" >South Dakota</option>
+  <option value="TN" >Tennessee</option>
+  <option value="TX" >Texas</option>
+  <option value="UT" >Utah</option>
+  <option value="VT" >Vermont</option>
+  <option value="VI" >Virgin Islands</option>
+  <option value="VA" >Virginia</option>
+  <option value="WA" >Washington</option>
+  <option value="WV" >West Virginia</option>
+  <option value="WI" >Wisconsin</option>
+  <option value="WY" >Wyoming</option>
+  <option value="AA" >Armed Forces (the) Americas</option>
+  <option value="AE" >Armed Forces Europe</option>
+  <option value="AP" >Armed Forces Pacific</option>
+  <option value="AB" >Alberta</option>
+  <option value="BC" >British Columbia</option>
+  <option value="MB" >Manitoba</option>
+  <option value="NF" >Newfoundland</option>
+  <option value="NB" >New Brunswick</option>
+  <option value="NS" >Nova Scotia</option>
+  <option value="NT" >Northwest Territories</option>
+  <option value="NU" >Nunavut</option>
+  <option value="ON" >Ontario</option>
+  <option value="PE" >Prince Edward Island</option>
+  <option value="QC" >Quebec</option>
+  <option value="SK" >Saskatchewan</option>
+  <option value="YT" >Yukon Territory</option>
+  <option value="ot" >Other</option>
+</SELECT>
+</div>
+<div class="formrow">
+<label for="country" accesskey="O">C<em>o</em>untry</label>
+<input type="text" id="country" name="country" value="" size=50>
+</div>
+<div class="formrow">
+  <label for="comment" accesskey="M">Your Co<em>m</em>ments</label>
+  <textarea name="comment" id="comment" rows=4 cols=40></textarea>
+</div>
+<div class="formrow">
+  <input type="submit" onsubmit="validate_form()" value="Sign Now!" />
+</div>
+</form>
+<SCRIPT language="JavaScript">
+var frmvalidator  = new Validator("petition");
+frmvalidator.addValidation("first_name","alpha"); 
+frmvalidator.addValidation("first_name","req","Please fill out all required fields.");
+frmvalidator.addValidation("last_name","alpha"); 
+frmvalidator.addValidation("last_name","req","Please fill out all required fields.");
+frmvalidator.addValidation("address","req","Please fill out all required fields.");
+frmvalidator.addValidation("city","req","Please fill out all required fields.");
+frmvalidator.addValidation("state","dontselect=0");
+
+
+frmvalidator.addValidation("email","maxlen=50");
+frmvalidator.addValidation("email","req", "Please fill out all required fields.");
+frmvalidator.addValidation("email","email");
+</script>
+<div class="fineprint">
+  BFC's email newsletter features reports from the front lines, describing actions taking place with Yellowstone's wild bison. Updates also feature news articles, essays, poems, natural history information, legislative, legal and management actions, and ultimately empower you to take action to protect the last wild buffalo population in the U.S.  Updates are sent out each week during November-June and every other week from June-November.  Your privacy is respected and we never share email addresses with anyone.
+ </div>
+</body> </html>
